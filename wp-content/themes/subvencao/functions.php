@@ -1,8 +1,14 @@
 <?php
+
+define( 'PATH_TEMPLATE', get_template_directory() . '/' );
+define( 'PATH_ASSETS', ABSPATH . 'assets/' );
+define( 'PATH_SVG', PATH_ASSETS . 'svg/' );
+define( 'URL_CSS', '/assets/css/' );
+
 add_action('after_setup_theme', 'blankslate_setup');
 function blankslate_setup()
 {
-    load_theme_textdomain('blankslate', get_template_directory() . '/languages');
+    load_theme_textdomain('blankslate', PATH_TEMPLATE . 'languages');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('responsive-embeds');
@@ -20,9 +26,16 @@ add_action('wp_enqueue_scripts', 'blankslate_enqueue');
 function blankslate_enqueue()
 {
     wp_enqueue_style('blankslate-style', get_stylesheet_uri());
-    wp_enqueue_style('default', home_url('/assets/css/default.css'));
-    wp_enqueue_style('home', home_url('/assets/css/home.css'));
+    wp_enqueue_style('default', URL_CSS . 'default.css');
     wp_enqueue_script('jquery');
+    
+    if (is_front_page()) {
+        wp_enqueue_style('home', URL_CSS . 'home.css');
+    }
+    
+    if (!is_front_page()) {
+        wp_enqueue_style('home', URL_CSS . 'breadcrumb.css');
+    }
 }
 add_action('wp_footer', 'blankslate_footer');
 function blankslate_footer()
@@ -167,4 +180,34 @@ function blankslate_comment_count($count)
     } else {
         return $count;
     }
+}
+
+function get_breadcrumb() {
+    include_once PATH_TEMPLATE . 'component-breadcrumb.php';
+}
+
+function carregar_svg( $filename, $url = false ) {
+	$arquivo = PATH_SVG . $filename;
+
+    if (! $url) {
+        $arquivo = $arquivo . '.svg';
+    }
+
+    if ($url) {
+        // Permitir apenas URLs relativas
+        if ( str_contains( $filename, '/' ) || str_contains( $filename, '\\' ) ) {
+            if( str_starts_with( $filename, '/' ) || str_starts_with( $filename, '\\' ) ) {
+                $arquivo = ABSPATH . mb_substr($filename, 1);
+            } else {
+                return '';
+            }
+        }
+    }
+
+
+	if ( file_exists( $arquivo ) ) {
+		return file_get_contents( $arquivo );
+	}
+
+	return '';
 }

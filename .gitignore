@@ -12,7 +12,6 @@
 !assets/
 assets/*
 !assets/favicon.ico
-!assets/svg/
 !assets/css/
 !assets/acf/
 
