@@ -1,3 +1,10 @@
+/* Cores do site */
+:root {
+    --azul: #0A3297;
+    --laranja: #F06E14;
+    --azul-claro: #14AFF0;
+}
+
 #wrapper {
     width: 1440px;
     display: block;
