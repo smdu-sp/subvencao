@@ -24,6 +24,7 @@
     border-radius: 4px;
     cursor: pointer;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .botao-pagina:nth-child(n + 1) {
@@ -54,4 +55,10 @@
 
 .botao-pagina .titulo_2 {
     font-size: 1.6rem;
+}
+
+@media (max-width: 1440px) {
+    .container-paginas {
+        justify-content: space-evenly;
+    }
 }
