@@ -8,11 +8,12 @@
 !vue/
 !acf/
 
-# Incluir apenas os ícones
+# Incluir apenas assets específicos
 !assets/
 assets/*
 !assets/favicon.ico
 !assets/svg/
+!assets/css/
 
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", themes" directory
