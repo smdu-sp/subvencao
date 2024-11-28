@@ -34,7 +34,11 @@ function blankslate_enqueue()
     }
     
     if (!is_front_page()) {
-        wp_enqueue_style('home', URL_CSS . 'breadcrumb.css');
+        wp_enqueue_style('breadcrumb', URL_CSS . 'breadcrumb.css');
+    }
+    
+    if (is_page('prestacao-de-contas')) {
+        wp_enqueue_style('formulario-prestacao', URL_CSS . 'formulario-prestacao.css');
     }
 }
 add_action('wp_footer', 'blankslate_footer');

@@ -1,0 +1,74 @@
+
+.container-prestacao {
+    padding: 0 130px;
+    margin-bottom: 120px;
+}
+
+.introducao-prestacao {
+    font-size: 2rem;
+    margin: 40px 0;
+}
+
+.instrucoes {
+    margin: 24px 0;
+    font-size: 1.6rem;
+}
+
+.instrucoes .subtitulo {
+    font-weight: 700;
+}
+
+.instrucoes a {
+    text-decoration: underline;
+    color: var(--laranja);
+    display: block;
+    line-height: 1.2;
+}
+
+#form-prestacao * {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.select-termo {
+    min-width: 60%;
+}
+
+fieldset {
+    margin: 20px 0;
+}
+
+.container-radio {
+    display: flex;
+}
+
+.container-radio legend {
+    margin-bottom: 20px;
+}
+
+.container-radio > div {
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.container-radio input {
+    margin-left: 0;
+}
+
+.label-arquivo {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.form-rodape {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.botao-enviar {
+    border: none;
+    background-color: var(--laranja);
+    color: #fff;
+    padding: 6px 40px;
+}
