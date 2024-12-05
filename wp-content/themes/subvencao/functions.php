@@ -40,6 +40,10 @@ function blankslate_enqueue()
     if (is_page('prestacao-de-contas')) {
         wp_enqueue_style('formulario-prestacao', URL_CSS . 'formulario-prestacao.css');
     }
+
+    if (is_page('transparencia')) {
+        wp_enqueue_style('transparencia', URL_CSS . 'transparencia.css');
+    }
 }
 add_action('wp_footer', 'blankslate_footer');
 function blankslate_footer()

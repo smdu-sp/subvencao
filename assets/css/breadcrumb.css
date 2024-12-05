@@ -1,7 +1,7 @@
 #breadcrumb {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0;
+  margin-top: 15px;
   min-height: 54px;
   position: relative;
 }
@@ -9,6 +9,11 @@
 #breadcrumb * {
   color: #fff;
   align-items: center;
+}
+
+#breadcrumb *:focus {
+  outline: max(2px, 0.15em) solid #fff;
+  outline-offset: max(2px, 0.15em);
 }
 
 .bg-azul {
@@ -27,13 +32,15 @@
   display: flex;
   align-items: center;
   position: absolute;
-  left: 0;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
+  padding: 7px 0;
+  border-radius: 4px;
 }
 
 .seta-voltar {
-  margin: 0 10px;
+  margin: 0 10px 0 0;
   display: flex;
 }
 
@@ -46,7 +53,7 @@
 }
 
 .texto-voltar {
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 .titulo-interna {
@@ -56,7 +63,11 @@
 }
 
 .titulo-interna h1 {
-  font-size: 2.2rem;
+  font-size: 3.6rem;
   font-weight: bold;
   vertical-align: middle;
+  margin-bottom: 0;
+  line-height: 54px;
 }
+
+
