@@ -1,0 +1,33 @@
+.container-senha-web {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 80px;
+}
+
+.senha-web {
+    width: 800px;
+    height: 400px;
+    background-color: hsl(240, 14%, 97%);
+    margin-top: 60px;
+    padding-top: 60px;
+    border-radius: 4px;
+}
+
+.subtitulo {
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.rodape {
+    min-height: 90px;
+    padding: 16px 20px;
+    font-size: 2rem;
+    background-color: hsl(240, 14%, 97%);
+    border-radius: 4px
+}
+
+.email {
+    color: #000;
+    text-decoration: underline;
+}

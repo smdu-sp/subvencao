@@ -28,6 +28,8 @@ if (isset($_SESSION['form_enviado'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $_SESSION['form_enviado'] = false;
+
     if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_token']) {
         // Processa os dados do formulário
         $campos = [
@@ -80,11 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $wpdb->insert('prestacao_contas', $sqlData);
 
             $_SESSION['form_enviado'] = true;
-        } else {
-            $_SESSION['form_enviado'] = false;
         }
-    } else {
-        $_SESSION['form_enviado'] = false;
     }
 
     // Impede o envio duplicado do formulário (PRG)
