@@ -3,6 +3,7 @@
 define( 'PATH_TEMPLATE', get_template_directory() . '/' );
 define( 'PATH_ASSETS', ABSPATH . 'assets/' );
 define( 'PATH_SVG', PATH_ASSETS . 'svg/' );
+define( 'PATH_API_REST', get_template_directory() . '/api/rest/' );
 define( 'URL_CSS', '/assets/css/' );
 
 add_action('after_setup_theme', 'blankslate_setup');
@@ -31,6 +32,8 @@ function blankslate_enqueue()
     
     if (is_front_page()) {
         wp_enqueue_style('home', URL_CSS . 'home.css');
+        wp_enqueue_script_module('mapa', '/mapa/main.js', array(), '1.0.0');
+        wp_enqueue_style('mapa', '/mapa/main.css', array(), '1.0.0');
     }
     
     if (!is_front_page()) {
@@ -223,3 +226,6 @@ function carregar_svg( $filename, $url = false ) {
 
 	return '';
 }
+
+// Cadastra os endpoints
+require_once PATH_API_REST . 'empreendimentos.php';

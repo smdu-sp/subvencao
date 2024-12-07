@@ -11,7 +11,7 @@
  * <weight>: Use a value from 100 to 1000 
  */
 
-.dm-sans-<uniquifier > {
+.dm-sans-<uniquifier> {
   font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;

@@ -18,7 +18,7 @@ $empreendimentos = $wpdb->get_results("SELECT * FROM empreendimentos");
             <div class="empreendimento">
                 <div class="empreendimento-header">
                     <h2 class="titulo"><?= $empreendimento->nome ?></h2>
-                    <span class="endereco"><?= $empreendimento->endereco ?></span>
+                    <span class="endereco"><?= $empreendimento->endereco ?> - <?= $empreendimento->bairro ?>, São Paulo/SP.</span>
                 </div>
                 <div class="empreendimento-conteudo">
                     <div class="responsavel">
