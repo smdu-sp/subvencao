@@ -1,19 +1,29 @@
 #container-mapa {
-  margin: 16px 0;
-  border: rgba(0,0,0, 0.1) 1px solid;
+  max-width: 860px;
+  margin: 20px 0;
+  border: rgba(0, 0, 0, 0.1) 1px solid;
+}
+
+.container-conteudo {
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
 }
 
 .container-introducao {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
   background-color: #fff;
-  width: 720px;
+  width: 540px;
   padding-bottom: 24px;
 }
 
+.titulo-principal {
+  font-size: 2.6rem;
+  font-weight: 700;
+  padding: 40px 0 0 20px;
+}
+
 .introducao {
-  padding: 18px 24px;
+  padding: 20px;
   font-size: 2.2rem;
   line-height: 1.2;
 }
@@ -67,51 +77,59 @@
 
 .container-paginas {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
   width: 100%;
   flex-wrap: wrap;
-  margin-bottom: 100px;
+  margin: 20px 0;
 }
 
 .botao-pagina {
-  flex: 0 0 auto;
-  background-color: #3498db;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
-  margin-bottom: 20px;
+  background-color: var(--fundo-medio);
+  min-width: 0;
+  transition: all 0.3s
 }
 
-.botao-pagina:nth-child(n + 1) {
+.botao-pagina a {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.botao-pagina a:focus,
+.botao-pagina:hover {
   background-color: var(--azul);
-}
-
-.botao-pagina:nth-child(n + 2) {
-  background-color: var(--laranja);
-}
-
-.botao-pagina:nth-child(n + 3) {
-  background-color: var(--azul-claro);
+  transition: all 0.3s
 }
 
 .botao-pagina .container-titulo-pagina {
-  min-height: 96px;
+  min-height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-weight: 700;
+  color: var(--azul-escuro);
+}
+
+.botao-pagina .container-titulo-pagina a:focus,
+.botao-pagina .container-titulo-pagina:hover {
   color: #fff;
 }
 
 .botao-pagina .titulo_1 {
-  font-size: 3.2rem;
-  line-height: 1.1;
+  font-size: 2.6rem;
+  line-height: 1.3;
 }
 
 .botao-pagina .titulo_2 {
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 @media (max-width: 1440px) {

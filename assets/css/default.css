@@ -1,9 +1,14 @@
 /* Cores do site */
 :root {
   --azul: #0a3297;
-  --laranja: #f06e14;
   --azul-claro: #14aff0;
+  --azul-escuro: #332c4b;
+  --laranja: #f06e14;
+  --fundo: #f7f7f9;
+  --fundo-medio: #e6e7f0;
+
   font-size: 10px !important;
+  background-color: var(--fundo);
 }
 
 /* Fontes
@@ -23,7 +28,7 @@
 }
 
 #wrapper {
-  width: 1440px;
+  width: 1300px;
   display: block;
   margin: 0 auto;
 }
@@ -120,7 +125,7 @@ input[type='file'] {
     font-weight: 600;
 }
 
-@media (max-width: 1440px) and (min-width: 360px) {
+@media (max-width: 1300px) and (min-width: 360px) {
   #wrapper {
     width: 100vw;
   }
