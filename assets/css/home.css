@@ -1,19 +1,22 @@
 #container-mapa {
-  max-width: 860px;
-  margin: 20px 0;
   border: rgba(0, 0, 0, 0.1) 1px solid;
 }
 
 .container-conteudo {
-  display: flex;
-  gap: 20px;
   background-color: #fff;
+  padding: 20px 16px;
+  position: relative;
 }
 
-.container-introducao {
+.introducao {
   background-color: #fff;
-  width: 540px;
-  padding-bottom: 24px;
+  width: 300px;
+  position: absolute;
+  height: calc(100% - 20px);
+  padding: 12px 20px 0 4px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  z-index: 1;
 }
 
 .titulo-principal {
@@ -22,27 +25,13 @@
   padding: 40px 0 0 20px;
 }
 
-.introducao {
-  padding: 20px;
-  font-size: 2.2rem;
-  line-height: 1.2;
-}
-
-.introducao-destaque {
+.introducao strong {
   font-weight: 700;
   color: var(--azul);
 }
 
-.introducao-botao {
-  padding: 4px 16px;
-  color: #fff;
-  border: none;
-  background-color: var(--azul);
-  font-size: 2.8rem;
-  line-height: 1.2;
-  font-weight: 700;
-  border-radius: 4px;
-  margin-left: 24px;
+.introducao p {
+  margin-bottom: 20px;
 }
 
 .legenda {
