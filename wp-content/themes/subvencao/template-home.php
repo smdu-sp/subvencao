@@ -30,9 +30,11 @@ get_header();
 </div>
 
 <div class="container-conteudo">
+    <div class="introducao-mascara"></div>
     <div class="introducao">
         <?php echo wpautop($introducao); ?>
     </div>
+    <button class="button-toggle-introducao" aria-label="Fechar painel lateral"><?= carregar_svg('chevron-left') ?></button>
     <div id="container-mapa">
         <div class="legenda">
             <ul>

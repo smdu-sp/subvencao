@@ -11,12 +11,14 @@
 .introducao {
   background-color: #fff;
   width: 300px;
+  left: 16px;
   position: absolute;
   height: calc(100% - 20px);
   padding: 12px 20px 0 4px;
   font-size: 1.6rem;
   line-height: 1.2;
   z-index: 1;
+  transition: left 0.8s linear;
 }
 
 .titulo-principal {
@@ -32,6 +34,35 @@
 
 .introducao p {
   margin-bottom: 20px;
+}
+
+.introducao-mascara {
+  width: 300px;
+  background-color: var(--fundo);
+  position: absolute;
+  height: calc(100% - 20px);
+  left: -300px;
+  z-index: 2;
+}
+
+.button-toggle-introducao {
+  position: absolute;
+  left: 316px;
+  padding: 21.5px 16.5px;
+  line-height: 0;
+  background-color: #a6bbf5;
+  color: #fff;
+  z-index: 1;
+  transition: left 0.8s linear;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+.button-toggle-introducao svg {
+  transition: transform 0.3s;
+  transition-delay: 0.8s;
 }
 
 .legenda {

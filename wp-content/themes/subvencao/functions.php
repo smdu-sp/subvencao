@@ -32,8 +32,11 @@ function blankslate_enqueue()
     
     if (is_front_page()) {
         wp_enqueue_style('home', URL_CSS . 'home.css');
-        wp_enqueue_script_module('mapa', '/mapa/main.js', array(), '1.0.0');
-        wp_enqueue_style('mapa', '/mapa/main.css', array(), '1.0.0');
+        wp_enqueue_script('home', '/assets/js/home.js', array(), '1.0.0');
+
+        // Script e estilo do Mapa
+        wp_enqueue_script_module('mapa', '/assets/js/mapa/main.js', array(), '1.0.0');
+        wp_enqueue_style('mapa', '/assets/css/mapa/main.css', array(), '1.0.0');
     }
     
     if (!is_front_page()) {

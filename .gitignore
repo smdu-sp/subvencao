@@ -12,8 +12,11 @@
 !assets/
 assets/*
 !assets/favicon.ico
-!assets/css/
 !assets/acf/
+!assets/css/
+assets/css/mapa/
+!assets/js/
+assets/js/mapa/
 
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", themes" directory

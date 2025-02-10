@@ -125,6 +125,10 @@ input[type='file'] {
     font-weight: 600;
 }
 
+.inverter {
+  transform: rotate(180deg);
+}
+
 @media (max-width: 1300px) and (min-width: 360px) {
   #wrapper {
     width: 100vw;
