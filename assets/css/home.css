@@ -120,12 +120,7 @@
 .botao-pagina a {
   width: 100%;
   border-radius: 4px;
-}
-
-.botao-pagina a:focus,
-.botao-pagina:hover {
   background-color: var(--azul);
-  transition: all 0.3s
 }
 
 .botao-pagina .container-titulo-pagina {
@@ -135,11 +130,6 @@
   justify-content: center;
   align-items: center;
   font-weight: 700;
-  color: var(--azul-escuro);
-}
-
-.botao-pagina .container-titulo-pagina a:focus,
-.botao-pagina .container-titulo-pagina:hover {
   color: #fff;
 }
 
