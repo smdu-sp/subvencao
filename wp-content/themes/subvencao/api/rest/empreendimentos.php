@@ -11,7 +11,7 @@ function get_empreendimentos_data(WP_REST_Request $request) {
     global $wpdb;
 
     $results = $wpdb->get_results(
-        "SELECT nome, endereco, latitude, longitude FROM empreendimentos",
+        "SELECT nome, endereco, latitude, longitude, chamamento FROM empreendimentos",
         ARRAY_A
     );
 
