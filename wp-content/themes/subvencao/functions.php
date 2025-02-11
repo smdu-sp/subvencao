@@ -231,4 +231,4 @@ function carregar_svg( $filename, $url = false ) {
 }
 
 // Cadastra os endpoints
-require_once PATH_API_REST . 'empreendimentos.php';
+require_once PATH_API_REST . 'endpoints.php';

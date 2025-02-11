@@ -16,7 +16,7 @@ function get_empreendimentos_data(WP_REST_Request $request) {
     );
 
     if (empty($results)) {
-        return new WP_Error('no_data', 'Nenhum empreendimento encontrado', array('status' => 404));
+        return new WP_Error('no_data', 'Nenhum empreendimento encontrado.', array('status' => 404));
     }
     
     return rest_ensure_response($results);

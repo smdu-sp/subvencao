@@ -4,7 +4,6 @@ Template Name: Home
 */
 
 $botoes = get_field('botoes');
-$introducao = get_field('introducao');
 get_header();
 
 ?>
@@ -30,22 +29,9 @@ get_header();
 </div>
 
 <div class="container-conteudo">
-    <div class="introducao-mascara"></div>
-    <div class="introducao">
-        <?php echo wpautop($introducao); ?>
-    </div>
-    <button class="button-toggle-introducao" aria-label="Fechar painel lateral"><?= carregar_svg('chevron-left') ?></button>
+    <?php require_once 'components/mapa/sidebar.php' ?>
     <div id="container-mapa">
-        <div class="legenda">
-            <ul>
-                <li>
-                    <div class="leg-aiu"></div> AIU Setor Central
-                </li>
-                <li>
-                    <div class="leg-requalifica"></div> Requalifica Centro
-                </li>
-            </ul>
-        </div>
+        <?php require_once 'components/mapa/legenda.php' ?>
     </div>
 </div>
 
