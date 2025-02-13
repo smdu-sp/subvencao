@@ -168,6 +168,8 @@ require_once 'api/prestacao-contas.php';
                 tamanho = (tamanho / 1024).toFixed(2);
             }
 
+            tamanho = tamanho.toString()
+
             nomeArquivoEl.innerHTML = `${nomeArquivo} (${tamanho.replace('.', ',')} ${arrayBytes[i]})`;
             nomeArquivoEl.classList.remove('hidden');
         }
