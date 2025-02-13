@@ -1,27 +1,38 @@
 #breadcrumb {
+  margin-top: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  margin-top: 15px;
-  min-height: 54px;
+  background-color: var(--fundo);
+  gap: 20px;
+}
+
+.breadcrumb-titulo {
+  min-height: 64px;
   position: relative;
-}
-
-#breadcrumb * {
   color: #fff;
-  align-items: center;
+  background-color: var(--azulSmul);
+  padding: 0 215px;
+  border-radius: 4px;
 }
 
-#breadcrumb *:focus {
+.breadcrumb-titulo *:focus {
   outline: max(2px, 0.15em) solid #fff;
   outline-offset: max(2px, 0.15em);
 }
 
+.breadcrumb-voltar {
+  background-color: #fff;
+  color: #000;
+  padding: 32px 215px 0 215px;
+}
+
 .bg-azul {
-  background-color: var(--azul);
+  background-color: var(--azulSmul);
 }
 
 .bg-azul-claro {
-  background-color: var(--azul-claro);
+  background-color: var(--azulzinhoSmul);
 }
 
 .bg-laranja {
@@ -29,45 +40,46 @@
 }
 
 .botao-voltar {
-  display: flex;
+  display: block;
   align-items: center;
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
   padding: 7px 0;
   border-radius: 4px;
+  color: #000;
+  max-width: 80px;
+}
+
+.botao-voltar:focus,
+.botao-voltar:active,
+.botao-voltar:hover {
+  text-decoration: none;
 }
 
 .seta-voltar {
   margin: 0 10px 0 0;
-  display: flex;
-}
-
-.seta-voltar svg {
-  height: 20px;
+  display: inline-block;
 }
 
 .seta-voltar path {
-  fill: #fff;
+  stroke: #000;
 }
 
 .texto-voltar {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 17px;
+  display: inline-block;
 }
 
 .titulo-interna {
   flex-grow: 1;
-  text-align: center;
+  text-align: start;
   display: grid;
 }
 
 .titulo-interna h1 {
-  font-size: 3.6rem;
-  font-weight: bold;
+  font-size: 2.6rem;
+  font-weight: 700;
   vertical-align: middle;
   margin-bottom: 0;
-  line-height: 54px;
+  line-height: 64px;
 }
-
-

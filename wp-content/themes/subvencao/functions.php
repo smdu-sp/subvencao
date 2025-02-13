@@ -1,6 +1,7 @@
 <?php
 
 define( 'PATH_TEMPLATE', get_template_directory() . '/' );
+define( 'PATH_COMPONENTS', get_template_directory() . '/components/' );
 define( 'PATH_ASSETS', ABSPATH . 'assets/' );
 define( 'PATH_SVG', PATH_ASSETS . 'svg/' );
 define( 'PATH_API_REST', get_template_directory() . '/api/rest/' );
@@ -201,7 +202,7 @@ function blankslate_comment_count($count)
 }
 
 function get_breadcrumb() {
-    include_once PATH_TEMPLATE . 'component-breadcrumb.php';
+    include_once PATH_COMPONENTS . 'breadcrumb.php';
 }
 
 function carregar_svg( $filename, $url = false ) {

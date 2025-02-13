@@ -29,7 +29,7 @@
 
 .introducao strong {
   font-weight: 700;
-  color: var(--azul);
+  color: var(--azulSmul );
 }
 
 .introducao p {
@@ -128,7 +128,7 @@
 .botao-pagina a {
   width: 100%;
   border-radius: 4px;
-  background-color: var(--azul);
+  background-color: var(--azulSmul );
 }
 
 .botao-pagina .container-titulo-pagina {

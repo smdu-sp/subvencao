@@ -1,7 +1,7 @@
 /* Cores do site */
 :root {
-  --azul: #0a3297;
-  --azul-claro: #14aff0;
+  --azulSmul : #0a3297;
+  --azulzinhoSmul : #14aff0;
   --azul-escuro: #332c4b;
   --laranja: #f06e14;
   --fundo: #f7f7f9;
@@ -110,7 +110,7 @@ input[type='file'] {
 }
 
 *:focus, input[type='file']:focus + label {
-  outline: max(2px, 0.15em) solid var(--corDaPagina);
+  outline: max(2px, 0.15em) solid var(--azulSmul);
   outline-offset: max(2px, 0.15em);
 }
 
