@@ -69,10 +69,13 @@ require_once 'api/prestacao-contas.php';
             <div class="botao-arquivo">
                 <div>
                     <input type="file" name="arquivo" id="arquivo" required>
-                    <label class="botao-upload" for="arquivo">Escolher arquivo</label>
+                    <label class="botao-upload" for="arquivo">
+                        <?= carregar_svg('folder') ?>
+                        <span>Pesquisar arquivos</span>
+                    </label>
                 </div>
                 <div id="nome-arquivo" class="nome-arquivo hidden">
-                    <span>Teste</span>
+                    <span></span>
                 </div>
             </div>
             <div id="erros-arquivo" class="erros-arquivo">
