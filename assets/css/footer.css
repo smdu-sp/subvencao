@@ -1,0 +1,22 @@
+.rodape {
+  padding: 80px 215px;
+  background-color: #fff;
+  font-family: 'DM Sans';
+  line-height: 2.1rem;
+  letter-spacing: -0.5px;
+  text-underline-offset: 2px;
+}
+
+.container-rodape {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  font-size: 1.6rem;
+  background-color: hsl(240, 14%, 97%);
+  border-radius: 4px;
+}
+
+.link-rodape {
+  color: #000;
+  text-decoration: underline;
+}

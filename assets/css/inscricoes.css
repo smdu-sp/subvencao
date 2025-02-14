@@ -18,16 +18,3 @@
     font-weight: 800;
     text-align: center;
 }
-
-.rodape {
-    min-height: 90px;
-    padding: 16px 20px;
-    font-size: 2rem;
-    background-color: hsl(240, 14%, 97%);
-    border-radius: 4px
-}
-
-.email {
-    color: #000;
-    text-decoration: underline;
-}

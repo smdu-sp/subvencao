@@ -42,6 +42,7 @@ function blankslate_enqueue()
     
     if (!is_front_page()) {
         wp_enqueue_style('breadcrumb', URL_CSS . 'breadcrumb.css');
+        wp_enqueue_style('footer', URL_CSS . 'footer.css');
     }
     
     if (is_page('prestacao-de-contas')) {
