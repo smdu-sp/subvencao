@@ -53,8 +53,8 @@ function blankslate_enqueue()
         wp_enqueue_style('transparencia', URL_CSS . 'transparencia.css');
     }
     
-    if (is_page('inscricoes')) {
-        wp_enqueue_style('inscricoes', URL_CSS . 'inscricoes.css');
+    if (is_page('editais')) {
+        wp_enqueue_style('editais', URL_CSS . 'editais.css');
     }
 }
 add_action('wp_footer', 'blankslate_footer');

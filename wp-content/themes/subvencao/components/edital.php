@@ -11,9 +11,9 @@ $links = $edital['links']
     <div class="descricao-edital">
         <?= $edital['descricao'] ?>
     </div>
-    <?php if (count($links)) { 
+    <?php if (count($links)) {
         foreach ($links as $key => $link) { ?>
             <a href="<?= $link['url'] ?>" class="link-edital" aria-label="<?= $link['aria_label'] ?>"><?= $link['label'] ?></a>
-        <?php } 
+        <?php }
     } ?>
 </div>
