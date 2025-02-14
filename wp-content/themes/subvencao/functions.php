@@ -40,7 +40,7 @@ function blankslate_enqueue()
         wp_enqueue_style('mapa', '/assets/css/mapa/main.css', array(), '1.0.0');
     }
     
-    if (!is_front_page()) {
+    if (! is_front_page()) {
         wp_enqueue_style('breadcrumb', URL_CSS . 'breadcrumb.css');
         wp_enqueue_style('footer', URL_CSS . 'footer.css');
     }

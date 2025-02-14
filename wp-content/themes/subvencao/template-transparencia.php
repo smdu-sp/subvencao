@@ -4,7 +4,6 @@ Template Name: Transparência
 */
 
 get_header();
-get_breadcrumb();
 
 global $wpdb;
 $empreendimentos = $wpdb->get_results("SELECT * FROM empreendimentos");

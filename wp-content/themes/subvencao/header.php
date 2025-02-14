@@ -19,3 +19,6 @@
         </a>
         <div id="container">
             <main id="content" role="main">
+                <?php if (! is_front_page()) {
+                    get_breadcrumb();
+                } ?>

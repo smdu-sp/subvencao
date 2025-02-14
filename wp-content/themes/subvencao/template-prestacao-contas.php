@@ -7,7 +7,6 @@ ob_start();
 session_start();
 
 get_header();
-get_breadcrumb();
 $termosOutorga = $wpdb->get_results("SELECT * FROM termos_outorga");
 $mensagemEnvio = false;
 
