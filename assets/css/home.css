@@ -120,7 +120,7 @@
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
-  background-color: var(--fundo-medio);
+  background-color: var(--fundoMedio);
   min-width: 0;
   transition: all 0.3s;
 }

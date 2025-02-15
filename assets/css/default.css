@@ -2,10 +2,10 @@
 :root {
   --azulSmul : #0a3297;
   --azulzinhoSmul : #14aff0;
-  --azul-escuro: #332c4b;
+  --azulEscuro: #332c4b;
   --laranja: #f06e14;
   --fundo: #f7f7f9;
-  --fundo-medio: #e6e7f0;
+  --fundoMedio: #e6e7f0;
 
   font-size: 10px !important;
   background-color: var(--fundo);
