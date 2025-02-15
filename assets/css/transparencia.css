@@ -33,6 +33,7 @@
   font-weight: 600;
   border-left-width: 26px;
   border-left-style: solid;
+  cursor: pointer;
 }
 
 .accordion .icone {

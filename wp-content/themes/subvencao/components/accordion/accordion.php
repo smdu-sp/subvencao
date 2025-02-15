@@ -61,9 +61,12 @@
             const icone = botao.getElementsByClassName('icone')[0]
             let timeout = 0
 
+            botao.blur()
+            
             if (icone.classList.contains('inverter')) {
                 timeout = 300
-            }
+            } 
+            
             section.classList.toggle('transparente')
             
             // Adiciona delay no fechamento do accordion
