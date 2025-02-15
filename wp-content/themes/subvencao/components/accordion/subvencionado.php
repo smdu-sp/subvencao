@@ -35,11 +35,11 @@
             </div>
             <div class="subvencionado-box">
                 <span class="subtitulo">Valor da Subvenção</span>
-                <span class="valor subvencao">R$ 2.647.136,35</span>
+                <span class="valor valor-subvencao">R$ 2.647.136,35</span>
             </div>
             <div class="subvencionado-box">
                 <span class="subtitulo">Valor pago</span>
-                <span class="valor pago">R$ xxx.xxx,xx</span>
+                <span class="valor valor-pago">R$ xxx.xxx,xx</span>
             </div>
         </div>
     </div>

@@ -16,6 +16,7 @@
 }
 
 .accordion {
+  margin-bottom: 20px;
 }
 
 .accordion .titulo {
@@ -110,10 +111,29 @@
   font-size: 2rem;
 }
 
-.subvencionado-box .valor.subvencao {
+.valor-subvencao {
   color: var(--azulSmul);
 }
 
-.subvencionado-box .valor.pago {
-  color: #2F8600;
+.valor-pago {
+  color: #2f8600;
+}
+
+/* Animação dos elementos do accordion */
+.subvencionado-nome,
+.subvencionado-info span,
+.subvencionado-info a,
+.subvencionado-box span {
+  transition: color 0.6s;
+}
+
+.container-subvencionado::after,
+.subvencionado-box {
+  transition: background-color 0.6s;
+}
+
+.transparente *,
+.transparente *::after {
+  color: transparent !important;
+  background-color: transparent !important;
 }
