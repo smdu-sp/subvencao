@@ -97,11 +97,12 @@
                             "id": ""
                         },
                         "layout": "block",
+                        "parent_repeater": "field_67af8cd473025",
                         "sub_fields": [
                             {
                                 "key": "field_67af87a073019",
-                                "label": "Chamamento Público",
-                                "name": "chamamento",
+                                "label": "Processo",
+                                "name": "processo",
                                 "aria-label": "",
                                 "type": "select",
                                 "instructions": "",
@@ -169,8 +170,7 @@
                                 "prepend": "",
                                 "append": ""
                             }
-                        ],
-                        "parent_repeater": "field_67af8cd473025"
+                        ]
                     },
                     {
                         "key": "field_67afbe0dbee56",
@@ -187,10 +187,11 @@
                             "id": ""
                         },
                         "layout": "block",
+                        "parent_repeater": "field_67af8cd473025",
                         "sub_fields": [
                             {
                                 "key": "field_67af8dd673028",
-                                "label": "Interessado",
+                                "label": "Empreendimento",
                                 "name": "",
                                 "aria-label": "",
                                 "type": "tab",
@@ -208,8 +209,8 @@
                             },
                             {
                                 "key": "field_67af8e0673029",
-                                "label": "Dados do Interessado",
-                                "name": "interessado",
+                                "label": "Dados do Empreendimento",
+                                "name": "empreendimento",
                                 "aria-label": "",
                                 "type": "group",
                                 "instructions": "",
@@ -224,8 +225,8 @@
                                 "sub_fields": [
                                     {
                                         "key": "field_67af88aa7301a",
-                                        "label": "Interessado",
-                                        "name": "interessado",
+                                        "label": "Nome",
+                                        "name": "nome",
                                         "aria-label": "",
                                         "type": "text",
                                         "instructions": "",
@@ -584,8 +585,7 @@
                                     }
                                 ]
                             }
-                        ],
-                        "parent_repeater": "field_67af8cd473025"
+                        ]
                     }
                 ]
             }
