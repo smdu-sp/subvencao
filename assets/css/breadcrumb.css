@@ -16,11 +16,6 @@
   border-radius: 4px;
 }
 
-.breadcrumb-titulo *:focus {
-  outline: max(2px, 0.15em) solid #fff;
-  outline-offset: max(2px, 0.15em);
-}
-
 .breadcrumb-voltar {
   background-color: #fff;
   color: #000;
@@ -82,4 +77,15 @@
   vertical-align: middle;
   margin-bottom: 0;
   line-height: 64px;
+}
+
+@media (max-width: 1024px) {
+  .breadcrumb-titulo {
+    padding: 0 2%;
+    margin: 0 2%;
+  }
+
+  .breadcrumb-voltar {
+    padding: 0 4% 4px 4%;
+  }
 }

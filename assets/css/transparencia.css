@@ -1,5 +1,5 @@
 .container-transparencia {
-  padding: 32px 215px;
+  padding: 32px 215px 64px 215px;
   background-color: #fff;
 }
 
@@ -111,4 +111,15 @@
 .transparente *::after {
   color: transparent !important;
   background-color: transparent !important;
+}
+
+@media (max-width: 1024px) {
+  .container-transparencia {
+    padding: 16px 4% 32px 4%;
+    background-color: #fff;
+  }
+
+  .subvencionado-info span {
+    margin-bottom: 8px;
+  }
 }

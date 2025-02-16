@@ -1,7 +1,7 @@
 /* Cores do site */
 :root {
-  --azulSmul : #0a3297;
-  --azulzinhoSmul : #14aff0;
+  --azulSmul: #0a3297;
+  --azulzinhoSmul: #14aff0;
   --azulEscuro: #332c4b;
   --laranja: #f06e14;
   --fundo: #f7f7f9;
@@ -16,7 +16,7 @@
  * <weight>: Use a value from 100 to 1000 
  */
 
-.dm-sans-<uniquifier> {
+.dm-sans-<uniquifier > {
   font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
@@ -100,28 +100,30 @@ input[type='radio']:checked::before {
 }
 
 input[type='file'] {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
-*:focus, input[type='file']:focus + label {
+*:focus,
+input[type='file']:focus + label {
   outline: max(2px, 0.15em) solid var(--azulSmul);
   outline-offset: max(2px, 0.15em);
 }
 
 /* Estados dos elementos */
 .hidden {
-    visibility: hidden;
-    position: absolute;
+  visibility: hidden;
+  position: absolute;
+  top: -99999px;
 }
 
 .erro {
-    color: #f33;
-    font-weight: 600;
+  color: #f33;
+  font-weight: 600;
 }
 
 .inverter {
@@ -131,5 +133,10 @@ input[type='file'] {
 @media (max-width: 1300px) and (min-width: 360px) {
   #wrapper {
     width: 100vw;
+  }
+
+  #header {
+    background-size: cover;
+    height: calc(100vw / 6.3);
   }
 }
