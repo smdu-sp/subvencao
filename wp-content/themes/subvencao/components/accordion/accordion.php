@@ -61,7 +61,7 @@ for ($i = $maior; $i >= $menor; $i--) {
     for (const botao of botoes) {
         botao.addEventListener('click', (event) => {
             const section = botao.parentElement.nextElementSibling
-            const icone = botao.getElementsByClassName('icone')[0]
+            const icone = botao.querySelector('svg')
             let timeout = 0
 
             botao.blur()

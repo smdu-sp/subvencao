@@ -38,7 +38,10 @@
 
 .accordion .icone {
   padding-right: 8px;
-  transition: transform 0.3s;
+}
+
+.accordion .icone svg {
+  transition: transform 0.3s;  
 }
 
 .container-subvencionado::after {
