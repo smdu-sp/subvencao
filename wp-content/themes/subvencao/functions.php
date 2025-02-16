@@ -51,6 +51,8 @@ function blankslate_enqueue()
 
     if (is_page('transparencia')) {
         wp_enqueue_style('transparencia', URL_CSS . 'transparencia.css');
+        wp_enqueue_style('simple-accordion', URL_CSS . 'simple-accordion.css');
+        wp_enqueue_script('simple-accordion', '/assets/js/simple-accordion.js', array(), '1.0.0');
     }
     
     if (is_page('editais')) {
