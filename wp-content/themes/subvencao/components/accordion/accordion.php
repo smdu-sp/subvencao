@@ -76,6 +76,7 @@ for ($i = $maior; $i >= $menor; $i--) {
             setTimeout(() => {
                 section.classList.toggle('hidden')
                 icone.classList.toggle('inverter')
+                botao.ariaExpanded = botao.ariaExpanded !== 'true'
             }, timeout)
         })
     }
