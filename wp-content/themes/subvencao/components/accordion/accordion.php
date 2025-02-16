@@ -66,13 +66,13 @@ for ($i = $maior; $i >= $menor; $i--) {
 
             botao.blur()
 
+            section.classList.toggle('transparente')
+            
+            // Adiciona delay no fechamento do accordion
             if (icone.classList.contains('inverter')) {
                 timeout = 300
             }
 
-            section.classList.toggle('transparente')
-
-            // Adiciona delay no fechamento do accordion
             setTimeout(() => {
                 section.classList.toggle('hidden')
                 icone.classList.toggle('inverter')
