@@ -137,3 +137,9 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+@media (max-width: 1024px) {
+  .container-prestacao {
+    padding: 0 4%;
+  }
+}

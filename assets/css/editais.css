@@ -25,8 +25,22 @@
     max-width: 820px;
 }
 
+.edital:last-child::after {
+  display: none;
+}
+
 .link-edital {
     color: var(--azulSmul);
     text-decoration: underline;
     text-underline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+  .container-editais {
+    padding: 20px 4%;
+  }
+
+  .edital > div {
+    margin-bottom: 8px;
+  }
 }
