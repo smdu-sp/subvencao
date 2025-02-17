@@ -130,13 +130,9 @@ input[type='file']:focus + label {
   transform: rotate(180deg);
 }
 
-@media (max-width: 1300px) and (min-width: 360px) {
-  #wrapper {
-    width: 100vw;
-  }
-
+@media (max-width: 1300px) {
   #header {
     background-size: cover;
-    height: calc(100vw / 6.3);
+    height: min(calc(100vw / 6.3), 133px);
   }
 }

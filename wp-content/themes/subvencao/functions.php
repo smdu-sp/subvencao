@@ -32,7 +32,7 @@ function blankslate_enqueue()
     wp_enqueue_script('jquery');
     
     if (is_front_page()) {
-        wp_enqueue_style('home', URL_CSS . 'home.css');
+        wp_enqueue_style('home', URL_CSS . 'home.css', array('mapa'));
         wp_enqueue_script('home', '/assets/js/home.js', array(), '1.0.0');
 
         // Script e estilo do Mapa
