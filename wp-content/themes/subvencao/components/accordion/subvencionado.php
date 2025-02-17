@@ -12,14 +12,16 @@
                 <?= $chamamento['chamamento']['processo']['label'] ?>
             </span>
             <span>
-                CNPJ: <?= $subvencionado['empreendimento']['cnpj'] ?>
-            </span>
-            <span>
                 <?= $subvencionado['imovel']['endereco'] ?> - <?= $subvencionado['imovel']['bairro'] ?>, São Paulo/SP.
             </span>
             <span>
                 Responsável pelo imóvel: <?= $subvencionado['empreendimento']['responsavel'] ?>
             </span>
+            <?php if ($subvencionado['empreendimento']['cnpj']) { ?>
+                <span>
+                    CNPJ: <?= $subvencionado['empreendimento']['cnpj'] ?>
+                </span>
+            <?php } ?>
             <span>
                 <a href="<?= $subvencionado['imovel']['plano_urbanistico'] ?>">Plano Urbanístico</a>
             </span>
