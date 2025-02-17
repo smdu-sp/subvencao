@@ -26,16 +26,16 @@ require_once 'api/prestacao-contas.php';
     <section class="instrucoes">
         <h2 class="subtitulo">Entenda as regras</h2>
         <div>
-            <a class="link" href="/"><span>Instrução Normativa nº 01/2024/SMUL</span></a>
+            <a class="link" href="https://legislacao.prefeitura.sp.gov.br/leis/instrucao-normativa-secretaria-municipal-de-urbanismo-e-licenciamento-smul-1-de-16-de-outubro-de-2024/consolidado"><span>Instrução Normativa nº 01/2024/SMUL</span></a>
         </div>
     </section>
     <section class="instrucoes">
         <h2 class="subtitulo">Faça o download dos arquivos</h2>
         <div>
-            <a class="link" href="/">Anexo I (Instrução Normativa nº 01/2024/SMUL)</span></a>
+            <a class="link" href="https://subvencao.prefeitura.sp.gov.br/wp-content/uploads/2025/02/Anexo_I___Modelo_de_Declaracao_de_Prestacao_de_Contas.docx">Anexo I (Instrução Normativa nº 01/2024/SMUL)</span></a>
         </div>
         <div>
-            <a class="link" href="/"><span>Anexo II (Instrução Normativa nº 01/2024/SMUL)</span></a>
+            <a class="link" href="https://subvencao.prefeitura.sp.gov.br/wp-content/uploads/2025/02/Anexo_II___Modelo_de_Relatorio_Consolidado_da_Documentacao_Comprobatoria.docx"><span>Anexo II (Instrução Normativa nº 01/2024/SMUL)</span></a>
         </div>
     </section>
     <form id="form-prestacao" class="form-prestacao" action="" method="POST" enctype="multipart/form-data">
