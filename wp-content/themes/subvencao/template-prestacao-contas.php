@@ -7,19 +7,21 @@ ob_start();
 session_start();
 
 get_header();
-$termosOutorga = $wpdb->get_results("SELECT * FROM termos_outorga");
 $mensagemEnvio = false;
 
-require_once 'api/prestacao-contas.php';
+require_once 'api/prestacao-contas/envio.php';
+require_once 'api/prestacao-contas/termo-outorga.php';
 
 ?>
 
 <div class="container-prestacao">
-    <?php if ($mensagemEnvio) { // Caso tenha ocorrido envio do form, exibir mensagem e não carregar o form ?>
+    <?php if ($mensagemEnvio) { // Caso tenha ocorrido envio do form, exibir mensagem e não carregar o form 
+    ?>
         <p class="introducao-prestacao">
             <?= $mensagemEnvio ?>
         </p>
-    <?php exit; } ?>
+    <?php exit;
+    } ?>
     <p class="introducao-prestacao">
         Nesta página o subvencionado enviará os documentos e arquivos relacionados à prestação de contas da iniciativa.
     </p>
@@ -42,8 +44,8 @@ require_once 'api/prestacao-contas.php';
         <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
         <select class="select-termo" name="termo_outorga" id="termo_outorga" required>
             <option value="" selected hidden disabled>Selecione o Termo de Outorga</option>
-            <?php foreach ($termosOutorga as $termo) { ?>
-                <option value="<?= $termo->id ?>"><?= $termo->nome ?></option>
+            <?php foreach ($termosOutorga as $id => $termo) { ?>
+                <option value="<?= $id ?>"><?= $termo ?></option>
             <?php } ?>
         </select>
         <div class="campos-radio">
