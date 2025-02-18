@@ -27,36 +27,36 @@ function blankslate_setup()
 add_action('wp_enqueue_scripts', 'blankslate_enqueue');
 function blankslate_enqueue()
 {
-    wp_enqueue_style('blankslate-style', get_stylesheet_uri());
-    wp_enqueue_style('default', URL_CSS . 'default.css');
+    wp_enqueue_style('blankslate-style', get_stylesheet_uri(), array(), '1.0.0');
+    wp_enqueue_style('default', URL_CSS . 'default.css', array(), '1.0.1');
     wp_enqueue_script('jquery');
     
     if (is_front_page()) {
-        wp_enqueue_style('home', URL_CSS . 'home.css', array('mapa'));
+        wp_enqueue_style('home', URL_CSS . 'home.css', array('mapa'), '1.0.0');
         wp_enqueue_script('home', '/assets/js/home.js', array(), '1.0.0');
 
         // Script e estilo do Mapa
-        wp_enqueue_script_module('mapa', '/assets/js/mapa/main.js', array(), '1.0.0');
-        wp_enqueue_style('mapa', '/assets/css/mapa/main.css', array(), '1.0.0');
+        wp_enqueue_script_module('mapa', '/assets/js/mapa/main.js', array(), '1.0.1');
+        wp_enqueue_style('mapa', '/assets/css/mapa/main.css', array(), '1.0.1');
     }
     
     if (! is_front_page()) {
-        wp_enqueue_style('breadcrumb', URL_CSS . 'breadcrumb.css');
-        wp_enqueue_style('footer', URL_CSS . 'footer.css');
+        wp_enqueue_style('breadcrumb', URL_CSS . 'breadcrumb.css', array(), '1.0.0');
+        wp_enqueue_style('footer', URL_CSS . 'footer.css', array(), '1.0.0');
     }
     
     if (is_page('prestacao-de-contas')) {
-        wp_enqueue_style('formulario-prestacao', URL_CSS . 'formulario-prestacao.css');
+        wp_enqueue_style('formulario-prestacao', URL_CSS . 'formulario-prestacao.css', array(), '1.0.0');
     }
 
     if (is_page('transparencia')) {
-        wp_enqueue_style('transparencia', URL_CSS . 'transparencia.css');
-        wp_enqueue_style('simple-accordion', URL_CSS . 'simple-accordion.css');
+        wp_enqueue_style('transparencia', URL_CSS . 'transparencia.css', array(), '1.0.0');
+        wp_enqueue_style('simple-accordion', URL_CSS . 'simple-accordion.css', array(), '1.0.0');
         wp_enqueue_script('simple-accordion', '/assets/js/simple-accordion.js', array(), '1.0.0');
     }
     
     if (is_page('editais')) {
-        wp_enqueue_style('editais', URL_CSS . 'editais.css');
+        wp_enqueue_style('editais', URL_CSS . 'editais.css', array(), '1.0.0');
     }
 }
 add_action('wp_footer', 'blankslate_footer');
