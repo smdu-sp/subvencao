@@ -26,6 +26,9 @@ $existeValor = $subvencionado['subvencao']['pago'] && is_numeric($subvencionado[
                 </span>
             <?php } ?>
             <span>
+                <a href="<?= $chamamento['chamamento']['tabela_pontuacao'] ?>">Tabela de Pontuação</a>
+            </span>
+            <span>
                 <a href="<?= $subvencionado['imovel']['plano_urbanistico'] ?>">Plano Urbanístico</a>
             </span>
         </div>

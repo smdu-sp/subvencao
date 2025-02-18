@@ -169,6 +169,27 @@
                                 "placeholder": "",
                                 "prepend": "",
                                 "append": ""
+                            },
+                            {
+                                "key": "field_67b4f2ccbeb6f",
+                                "label": "Tabela de Pontuação",
+                                "name": "tabela_pontuacao",
+                                "aria-label": "",
+                                "type": "file",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "url",
+                                "library": "all",
+                                "min_size": "",
+                                "max_size": "",
+                                "mime_types": "",
+                                "allow_in_bindings": 0
                             }
                         ]
                     },
@@ -486,10 +507,10 @@
                                     },
                                     {
                                         "key": "field_67af8d9d73027",
-                                        "label": "Link do Plano Urbanístico",
+                                        "label": "Plano Urbanístico",
                                         "name": "plano_urbanistico",
                                         "aria-label": "",
-                                        "type": "text",
+                                        "type": "file",
                                         "instructions": "",
                                         "required": 0,
                                         "conditional_logic": 0,
@@ -498,12 +519,12 @@
                                             "class": "",
                                             "id": ""
                                         },
-                                        "default_value": "",
-                                        "maxlength": "",
-                                        "allow_in_bindings": 0,
-                                        "placeholder": "",
-                                        "prepend": "",
-                                        "append": ""
+                                        "return_format": "url",
+                                        "library": "all",
+                                        "min_size": "",
+                                        "max_size": "",
+                                        "mime_types": "",
+                                        "allow_in_bindings": 1
                                     }
                                 ]
                             },
@@ -542,9 +563,9 @@
                                 "layout": "block",
                                 "sub_fields": [
                                     {
-                                        "key": "field_67af90297302d",
-                                        "label": "Longitude",
-                                        "name": "longitude",
+                                        "key": "field_67af90377302e",
+                                        "label": "Latitude",
+                                        "name": "latitude",
                                         "aria-label": "",
                                         "type": "text",
                                         "instructions": "",
@@ -563,9 +584,9 @@
                                         "append": ""
                                     },
                                     {
-                                        "key": "field_67af90377302e",
-                                        "label": "Latitude",
-                                        "name": "latitude",
+                                        "key": "field_67af90297302d",
+                                        "label": "Longitude",
+                                        "name": "longitude",
                                         "aria-label": "",
                                         "type": "text",
                                         "instructions": "",
