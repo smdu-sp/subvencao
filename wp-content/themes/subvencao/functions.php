@@ -178,31 +178,6 @@ function blankslate_pingback_header()
         printf('<link rel="pingback" href="%s">' . "\n", esc_url(get_bloginfo('pingback_url')));
     }
 }
-add_action('comment_form_before', 'blankslate_enqueue_comment_reply_script');
-function blankslate_enqueue_comment_reply_script()
-{
-    if (get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
-    }
-}
-function blankslate_custom_pings($comment)
-{
-?>
-    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>"><?php echo esc_url(comment_author_link()); ?></li>
-<?php
-}
-add_filter('get_comments_number', 'blankslate_comment_count', 0);
-function blankslate_comment_count($count)
-{
-    if (!is_admin()) {
-        global $id;
-        $get_comments = get_comments('status=approve&post_id=' . $id);
-        $comments_by_type = separate_comments($get_comments);
-        return count($comments_by_type['comment']);
-    } else {
-        return $count;
-    }
-}
 
 function get_breadcrumb() {
     include_once PATH_COMPONENTS . 'breadcrumb.php';
