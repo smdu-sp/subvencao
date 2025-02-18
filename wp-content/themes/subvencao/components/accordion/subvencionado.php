@@ -1,5 +1,8 @@
 <?php
 
+// Verifica se existe valor pago
+$existeValor = $subvencionado['subvencao']['pago'] && is_numeric($subvencionado['subvencao']['pago'][0]);
+
 ?>
 
 <div class="container-subvencionado">
@@ -35,14 +38,16 @@
                 <span class="subtitulo">% Subvenção</span>
                 <span class="valor"><?= $subvencionado['subvencao']['pct'] ?>%</span>
             </div>
-            <div class="subvencionado-box">
+            <div class="subvencionado-box <?= $existeValor ? '' : 'sem-valor' ?>">
                 <span class="subtitulo">Valor da Subvenção</span>
                 <span class="valor valor-subvencao">R$ <?= $subvencionado['subvencao']['valor'] ?></span>
             </div>
-            <div class="subvencionado-box">
-                <span class="subtitulo">Valor pago</span>
-                <span class="valor valor-pago">R$ <?= $subvencionado['subvencao']['pago'] ?></span>
-            </div>
+            <?php if ($existeValor) { ?>
+                <div class="subvencionado-box">
+                    <span class="subtitulo">Valor pago</span>
+                    <span class="valor valor-pago">R$ <?= $subvencionado['subvencao']['pago'] ?></span>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </div>

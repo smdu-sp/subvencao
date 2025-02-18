@@ -119,6 +119,10 @@ input[type='file']:focus + label {
 }
 
 @media (max-width: 1300px) {
+  #wrapper {
+    width: auto;
+  }
+
   #header {
     background-size: cover;
     height: min(calc(100vw / 6.3), 133px);

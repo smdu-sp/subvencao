@@ -70,6 +70,10 @@
   max-width: 196px;
 }
 
+.subvencionado-box.sem-valor {
+  max-width: 240px;
+}
+
 .subvencionado-box .subtitulo,
 .subvencionado-box .valor {
   line-height: 1.3;
