@@ -41,6 +41,7 @@
   border-radius: 4px;
   color: #000;
   max-width: 80px;
+  text-decoration: none;
 }
 
 .botao-voltar:focus,

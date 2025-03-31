@@ -58,6 +58,10 @@ function blankslate_enqueue()
     if (is_page('editais')) {
         wp_enqueue_style('editais', URL_CSS . 'editais.css', array(), '1.0.0');
     }
+
+    if (is_page('inscricoes')) {
+        wp_enqueue_style('inscricoes', URL_CSS . 'inscricoes.css', array(), '1.0.0');
+    }
 }
 add_action('wp_footer', 'blankslate_footer');
 function blankslate_footer()
