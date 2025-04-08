@@ -8,13 +8,16 @@ if (empty($_SESSION['csrf_token'])) {
 }
 
 // Verifica se o formulário foi enviado e inserido corretamente
-if (isset($_SESSION['form_enviado'])) {    
-    if ($_SESSION['form_enviado'] == true) {
+if (isset($_SESSION['form_enviado'])) {
+    $formEnviado = $_SESSION['form_enviado'];
+
+    if ($formEnviado) {
         $mensagemEnvio = 'Formulário enviado com sucesso!';
     } else {
         $mensagemEnvio = 'Houve um erro no envio do formulário, tente novamente mais tarde.';
     }
-    
+
+    require_once 'components/email/envio.php';    
     unset($_SESSION['form_enviado']);
 }
 
@@ -73,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $wpdb->insert('prestacao_contas', $sqlData);
 
             $_SESSION['form_enviado'] = true;
+            $_SESSION['arquivo'] = $arquivo;
         }
     }
 

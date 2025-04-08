@@ -6,6 +6,10 @@ define( 'PATH_ASSETS', ABSPATH . 'assets/' );
 define( 'PATH_SVG', PATH_ASSETS . 'svg/' );
 define( 'PATH_API_REST', get_template_directory() . '/api/rest/' );
 define( 'URL_CSS', '/assets/css/' );
+define( 'FROM_NAME', '' );
+define( 'FROM_EMAIL', '' );
+define( 'ADMIN_EMAIL', '' );
+define( 'SUBVENCAO_EMAIL', '' );
 
 add_action('after_setup_theme', 'blankslate_setup');
 function blankslate_setup()
