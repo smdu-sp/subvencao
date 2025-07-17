@@ -32,7 +32,7 @@ add_action('wp_enqueue_scripts', 'blankslate_enqueue');
 function blankslate_enqueue()
 {
     wp_enqueue_style('blankslate-style', get_stylesheet_uri(), array(), '1.0.0');
-    wp_enqueue_style('default', URL_CSS . 'default.css', array(), '1.0.1');
+    wp_enqueue_style('default', URL_CSS . 'default.css', array(), '1.0.3');
     wp_enqueue_script('jquery');
     
     if (is_front_page()) {
