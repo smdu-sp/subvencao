@@ -25,12 +25,16 @@ $existeValor = $subvencionado['subvencao']['pago'] && is_numeric($subvencionado[
                     CNPJ: <?= $subvencionado['empreendimento']['cnpj'] ?>
                 </span>
             <?php } ?>
-            <span>
-                <a href="<?= $chamamento['chamamento']['tabela_pontuacao'] ?>">Tabela de Pontuação</a>
-            </span>
-            <span>
-                <a href="<?= $subvencionado['imovel']['plano_urbanistico'] ?>">Plano Urbanístico</a>
-            </span>
+            <?php if ($chamamento['chamamento']['tabela_pontuacao']) { ?>
+                <span>
+                    <a href="<?= $chamamento['chamamento']['tabela_pontuacao'] ?>">Tabela de Pontuação</a>
+                </span>
+            <?php } ?>
+            <?php if ($subvencionado['imovel']['plano_urbanistico']) { ?>
+                <span>
+                    <a href="<?= $subvencionado['imovel']['plano_urbanistico'] ?>">Plano Urbanístico</a>
+                </span>
+            <?php } ?>
         </div>
         <div class="subvencionado-valores">
             <div class="subvencionado-box">
