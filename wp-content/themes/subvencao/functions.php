@@ -34,21 +34,30 @@ function blankslate_enqueue()
     wp_enqueue_style('blankslate-style', get_stylesheet_uri(), array(), '1.0.2');
     wp_enqueue_style('default', URL_CSS . 'default.css', array(), '1.0.3');
     wp_enqueue_script('jquery');
-    
+
     if (is_front_page()) {
         wp_enqueue_style('home', URL_CSS . 'home.css', array('mapa'), '1.0.2');
         wp_enqueue_script('home', '/assets/js/home.js', array(), '1.0.2');
 
         // Script e estilo do Mapa
-        wp_enqueue_script_module('mapa', '/assets/js/mapa/main.js', array(), '1.0.4');
+        wp_enqueue_script_module('mapa', '/assets/js/mapa/main-osm.js', array(), '1.0.4');
         wp_enqueue_style('mapa', '/assets/css/mapa/main.css', array(), '1.0.2');
     }
-    
+
+    if (is_404()) {
+        wp_enqueue_style('style-404', URL_CSS . '404.css', array(), '1.0.0');
+        wp_enqueue_script('redirect-404', '/assets/js/redirect-404.js', array(), '1.0.0');
+        wp_localize_script('redirect-404', 'Config404', array('homeUrl' => home_url('/')));
+    }
+
     if (! is_front_page()) {
-        wp_enqueue_style('breadcrumb', URL_CSS . 'breadcrumb.css', array(), '1.0.2');
         wp_enqueue_style('footer', URL_CSS . 'footer.css', array(), '1.0.2');
     }
-    
+
+    if (! (is_front_page() || is_404())) {
+        wp_enqueue_style('breadcrumb', URL_CSS . 'breadcrumb.css', array(), '1.0.2');
+    }
+
     if (is_page('prestacao-de-contas')) {
         wp_enqueue_style('formulario-prestacao', URL_CSS . 'formulario-prestacao.css', array(), '1.0.2');
     }
@@ -58,7 +67,7 @@ function blankslate_enqueue()
         wp_enqueue_style('simple-accordion', URL_CSS . 'simple-accordion.css', array(), '1.0.2');
         wp_enqueue_script('simple-accordion', '/assets/js/simple-accordion.js', array(), '1.0.2');
     }
-    
+
     if (is_page('editais')) {
         wp_enqueue_style('editais', URL_CSS . 'editais.css', array(), '1.0.2');
     }
@@ -187,12 +196,14 @@ function blankslate_pingback_header()
     }
 }
 
-function get_breadcrumb() {
+function get_breadcrumb()
+{
     include_once PATH_COMPONENTS . 'breadcrumb.php';
 }
 
-function carregar_svg( $filename, $url = false ) {
-	$arquivo = PATH_SVG . $filename;
+function carregar_svg($filename, $url = false)
+{
+    $arquivo = PATH_SVG . $filename;
 
     if (! $url) {
         $arquivo = $arquivo . '.svg';
@@ -214,7 +225,7 @@ function carregar_svg( $filename, $url = false ) {
 		return file_get_contents( $arquivo );
 	}
 
-	return '';
+    return '';
 }
 
 // Cadastra os endpoints

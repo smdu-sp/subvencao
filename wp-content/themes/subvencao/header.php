@@ -19,6 +19,6 @@
         </a>
         <div id="container">
             <main id="content" role="main">
-                <?php if (! is_front_page()) {
+                <?php if (! (is_front_page() || is_404())) {
                     get_breadcrumb();
                 } ?>

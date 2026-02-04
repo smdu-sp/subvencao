@@ -1,0 +1,25 @@
+.container-404 {
+  padding: 20px 235px 80px 215px;
+  background-color: #fff;
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+.container-404 strong,
+.container-404 h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.link-edital {
+  color: var(--azulSmul);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+  .container-404 {
+    padding: 20px 4%;
+  }
+}
